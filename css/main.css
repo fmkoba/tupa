@@ -26,6 +26,7 @@ use:    One Page Template
 /---------------------------------------------------------------------------
 1. Web Fonts
 ----------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Stint+Ultra+Condensed');
 @font-face {
   font-family: 'icomoon';
   src:url('../fonts/icomoon.eot?zi1cou');
@@ -1794,7 +1795,7 @@ html, body {
     background-color: #1e1e20;
 }
 html, html a {
-    -font-size: 100%; 
+    -font-size: 100%;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
@@ -1862,12 +1863,12 @@ body {
 @-keyframes spin1 {
     0% { transform: rotate(0deg);}
     100% { transform: rotate(360deg);}
-} 
-img { 
-    display: block; 
-    border: 0; 
+}
+img {
+    display: block;
+    border: 0;
     max-width: 100%;
-    height: auto; 
+    height: auto;
     width: 100%;
 }
 p {
@@ -1923,7 +1924,7 @@ section, footer {
 }
 .parallax {
     margin: 0 auto;
-    width: 100%; 
+    width: 100%;
     height: 420px;
     background-size: cover;
     -webkit-background-size: cover;
@@ -1941,7 +1942,7 @@ section, footer {
 .overlay {
     display: table;
     width: 100%;
-    height: 100%;  
+    height: 100%;
 }
 .overlay-inner {
     display: table-cell;
@@ -1963,7 +1964,7 @@ strong {
   border-right: 17px solid#333 !important;
 }
 .mfp-arrow-right:after, .mfp-arrow-right .mfp-a {
-  border-left: 17px solid#333 !important;   
+  border-left: 17px solid#333 !important;
 }
 .mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
   color:#333 !important;
@@ -1979,7 +1980,7 @@ strong {
   left: 50%;
   margin-left: -15px;
 }
-h1, h2, h3, h4{ font-family: 'Covered By Your Grace', cursive; }
+h1, h2, h3, h4{ font-family: 'Stint Ultra Condensed', cursive; }
 h5, h6 { font-family: 'Fjalla One', sans-serif; }
 h1{ font-size: 80px; }
 h2{ font-size: 52px; }
@@ -2035,8 +2036,8 @@ form ::-moz-placeholder {
 form :-ms-input-placeholder {
    color: #b7ab9f;
 }
-#name-error, 
-#email-error, 
+#name-error,
+#email-error,
  #message-error {
     color:#333;
     width: 100%;
@@ -2321,7 +2322,7 @@ form :-ms-input-placeholder {
     width: 80px;
 }
 .avatar h3 {
-    font-family: 'Covered by your grace', cursive;
+    font-family: 'Stint Ultra Condensed', cursive;
     color: #fff;
 }
 .avatar p {
@@ -2358,7 +2359,7 @@ form :-ms-input-placeholder {
     transition: height .5s ease;
     display: block;
 }
-.main-top .logo img { 
+.main-top .logo img {
     max-width: 100%;
 }
 .main-top.sticky {
@@ -2374,7 +2375,7 @@ form :-ms-input-placeholder {
       padding: 0px;
 }
 .main-top.menu-version-2 .logo a{
-     margin-top: -31px; 
+     margin-top: -31px;
 }
 .main-top.menu-version-2 .icon-top-menu {
     display: none;
@@ -2427,7 +2428,7 @@ ul.social li a:hover {
     position: relative;
 }
 .navbar-default {
-    background-color:#333;
+    background-color:#000;
     border: 0px;
     border-radius: 0px;
 }
@@ -2452,7 +2453,7 @@ ul.social li a:hover {
     z-index: 1;
     position: absolute;
     top: 95px;
-    width: 0%; 
+    width: 0%;
     height: 1px;
     background: #fff;
     -webkit-transition: .35s ease width;
@@ -2460,14 +2461,14 @@ ul.social li a:hover {
     -o-transition: .35s ease width;
     transition: .35s ease width;
 }
-.navbar-default .navbar-nav>li>a:focus:after, 
+.navbar-default .navbar-nav>li>a:focus:after,
 .navbar-default .navbar-nav>li>a:hover:after {
-    width: 100%; 
+    width: 100%;
 }
-.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-nav>.open>a, 
-.navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
 .navbar-default .navbar-nav>.open>a:hover {
     color: #fff;
     background-color: transparent;
@@ -2479,7 +2480,7 @@ ul.social li a:hover {
     background-color: #e2d8cf;
 }
 .navbar-collapse {
-    background-color:#333;
+    background-color:#000;
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border: 0px;
@@ -2502,14 +2503,14 @@ ul.social li a:hover {
 .nav-list li {
     margin: 0px;
 }
-.nav-list li a:before { 
+.nav-list li a:before {
     content: '';
     display: block;
     z-index: -1;
     position: absolute;
     top: 32px;
     left: -100%;
-    width: 15%; 
+    width: 15%;
     height: 1px;
     background:#333;
     -webkit-transition: all .35s ease;
@@ -2555,10 +2556,10 @@ ul.social li a:hover {
     -o-transition: .35s ease opacity;
     transition: .35s ease opacity;
 }
-.navbar-default .navbar-nav>li>a:focus .icon-top-menu, 
+.navbar-default .navbar-nav>li>a:focus .icon-top-menu,
 .navbar-default .navbar-nav>li>a:hover .icon-top-menu,
-.navbar-default .navbar-nav>.open>a .icon-top-menu, 
-.navbar-default .navbar-nav>.dropdown.open>a:active .icon-top-menu, 
+.navbar-default .navbar-nav>.open>a .icon-top-menu,
+.navbar-default .navbar-nav>.dropdown.open>a:active .icon-top-menu,
 .navbar-default .navbar-nav>.open>a:hover .icon-top-menu {
     opacity: 1;
 }
@@ -2593,7 +2594,7 @@ header {
 }
 .tp-item-1-title {
     font-size: 80px;
-    font-family: 'Covered By Your Grace', cursive;
+    font-family: 'Stint Ultra Condensed', cursive;
     color: #fff;
 }
 .tp-item-1 {
@@ -2689,11 +2690,11 @@ header {
 }
 #daily-menu .daily-menu-item figure:hover figcaption i {
     opacity: 1;
-    -webkit-transition-delay: 0.3s; 
-    -moz-transition-delay: 0.3s; 
-    -ms-transition-delay: 0.3s; 
-    -o-transition-delay: 0.3s; 
-    transition-delay: 0.3s; 
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    -ms-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
 }
 #daily-menu .daily-menu-item figure:hover figcaption h3 {
     opacity: 1;
@@ -2705,11 +2706,11 @@ header {
 }
 #daily-menu .daily-menu-item figure:hover figcaption span {
     opacity: 1;
-    -webkit-transition-delay: 0.4s; 
-    -moz-transition-delay: 0.4s; 
-    -ms-transition-delay: 0.4s; 
-    -o-transition-delay: 0.4s; 
-    transition-delay: 0.4s; 
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    -ms-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s;
 }
 #daily-menu .daily-menu-item figure figcaption h3 {
     opacity: 0;
@@ -2724,11 +2725,11 @@ header {
     font-size:18px;
     font-family: 'Fjalla One', sans-serif;
     opacity: 0;
-    -webkit-transition: all 0.2s ease-in-out;   
-    -moz-transition: all 0.2s ease-in-out;   
-    -o-transition: all 0.2s ease-in-out;   
-    -ms-transition: all 0.2s ease-in-out;   
-    transition: all 0.2s ease-in-out;   
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 #daily-menu .daily-menu-item .overlay-inner span:after {
     content: " ";
@@ -2746,11 +2747,11 @@ header {
 }
 #daily-menu .daily-menu-item figure:hover figcaption span:after {
     opacity: 1;
-    -webkit-transition-delay: .6s; 
-    -moz-transition-delay: .6s; 
-    -ms-transition-delay: .6s; 
-    -o-transition-delay: .6s; 
-    transition-delay: .6s; 
+    -webkit-transition-delay: .6s;
+    -moz-transition-delay: .6s;
+    -ms-transition-delay: .6s;
+    -o-transition-delay: .6s;
+    transition-delay: .6s;
 }
 /*---------------------------------------------------------------------------
 7. Section Menu
@@ -2773,7 +2774,7 @@ header {
     margin: 20px auto 0px auto;
 }
 #our-menu .our-menu-food-list li {
-    font-family: 'Covered By Your Grace', cursive;
+    font-family: 'Stint Ultra Condensed', cursive;
     font-size: 30px;
     color: #b7ab9f;
     padding: 15px 0px;
@@ -2853,7 +2854,7 @@ header {
   vertical-align: middle;
   text-align: center;
 }
-#our-services .parallax { 
+#our-services .parallax {
     background-image: url(../img/parallax/our-services-parallax.jpg);
 }
 #our-services .service:hover i{
@@ -2946,11 +2947,11 @@ header {
 }
 #our-gallery .photo-item:hover .photo-item-hover i {
     opacity: 1;
-    -webkit-transition-delay: 0.3s; 
-    -moz-transition-delay: 0.3s; 
-    -ms-transition-delay: 0.3s; 
-    -o-transition-delay: 0.3s; 
-    transition-delay: 0.3s; 
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    -ms-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
 }
 
 /*---------------------------------------------------------------------------
@@ -2990,16 +2991,16 @@ header {
     border-color:#333;
 }
 #our-blog .blog-item figure figcaption .headline-icon {
-   font-size: 15px; 
-   line-height: 10px ! important; 
-   font-weight: lighter; 
+   font-size: 15px;
+   line-height: 10px ! important;
+   font-weight: lighter;
    text-transform: uppercase;
 }
 #our-blog .blog-item figure figcaption .headline-icon span{
-   font-size: 22px; 
+   font-size: 22px;
    margin: 0px;
-   padding: 0px; 
-   display: block; 
+   padding: 0px;
+   display: block;
    line-height: 30px;
 }
 #our-blog .blog-item figure figcaption .headline-icon span:first-child {
@@ -3010,7 +3011,7 @@ header {
     position: absolute;
     left: 0;
     width: 100%;
-    
+
 }
 #our-blog .blog-item .blog-item-image {
     height: 70%;
@@ -3052,13 +3053,13 @@ header {
 #our-blog .blog-item figure figcaption h3 {
     margin-bottom: 10px;
 }
-.blog-preview-date, 
+.blog-preview-date,
 .blog-preview-author {
     color: #fff;
     font-family: 'Rambla', sans-serif;
     margin: 0px 10px;
 }
-.blog-preview-date .icon-clock, 
+.blog-preview-date .icon-clock,
 .blog-preview-author .icon-user {
     color: #b7ab9f !important;
     font-size: 15px !important;
@@ -3086,7 +3087,7 @@ header {
     top: 0px;
     left: 0px;
 }
-#header-blog-overview .parallax-blog-overview { 
+#header-blog-overview .parallax-blog-overview {
     background-image: url(../img/parallax/header-blog.jpg);
     height: 500px;
 }
@@ -3111,7 +3112,7 @@ header {
     width: 45px;
     height: 3px;
     display: block;
-    margin: 20px auto;   
+    margin: 20px auto;
 }
 #blog-list-item {
   position: relative;
@@ -3199,7 +3200,7 @@ header {
     margin-top: 80px;
 }
 #single-entry-page-blog #comments h2 {
-    font-family: 'Covered By Your Grace', cursive;
+    font-family: 'Stint Ultra Condensed', cursive;
     font-size: 32px;
     color: #e3d9cf;
 }
@@ -3317,8 +3318,8 @@ header {
 /*---------------------------------------------------------------------------
 10. Section Testimonials
 ----------------------------------------------------------------------------*/
-#testimonials .parallax { 
-    background-image: url(../img/parallax/testimonials-parallax.jpg); 
+#testimonials .parallax {
+    background-image: url(../img/parallax/testimonials-parallax.jpg);
     margin-top: 35px;
 }
 #testimonials .parallax .container {
@@ -3413,7 +3414,7 @@ footer .btn-telephone:hover, footer .btn-top:hover {
 /*---------------------------------------------------------------------------
 12 Media Queries
 ----------------------------------------------------------------------------*/
-@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .parallax {
         background-attachment: scroll !important;
         -webkit-background-size: cover !important;
@@ -3460,7 +3461,7 @@ footer .btn-telephone:hover, footer .btn-top:hover {
     .blog-item{
             width:100% !important;
     }
-    
+
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
@@ -3489,7 +3490,7 @@ footer .btn-telephone:hover, footer .btn-top:hover {
 /*---------------------------------------------------------------------------
                                         12.1 Media Queries for Tablet
 ----------------------------------------------------------------------------*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {    
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     h2{ font-size: 40px; }
     h3{ font-size: 32px; }
     h4{ font-size: 28px; }
@@ -3497,7 +3498,7 @@ footer .btn-telephone:hover, footer .btn-top:hover {
         display: none;
     }
     .navbar-default {
-        background-color:#333 !important;
+        background-color:#000 !important;
     }
     .navbar-right .dropdown-menu {
         right: auto;
@@ -3545,9 +3546,9 @@ footer .btn-telephone:hover, footer .btn-top:hover {
     .navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu>li>a {
         padding: 10px 0px;
     }
-    .navbar-default .navbar-nav>li>a:focus:after, 
+    .navbar-default .navbar-nav>li>a:focus:after,
     .navbar-default .navbar-nav>li>a:hover:after {
-        width: 0%; 
+        width: 0%;
     }
     .navbar-default .navbar-nav {
         padding: 0px;
@@ -3555,7 +3556,7 @@ footer .btn-telephone:hover, footer .btn-top:hover {
     .navbar-toggle {
         margin-top: 15px;
     }
-    .nav-list li a:before { 
+    .nav-list li a:before {
         width: 20px !important;
     }
     #our-blog .blog-item .blog-item-image {
@@ -3646,6 +3647,6 @@ footer .btn-telephone:hover, footer .btn-top:hover {
     }
     .navbar-collapse.in {
       max-height: 200px !important;
-      overflow-y: auto !important; 
+      overflow-y: auto !important;
    }
 }
