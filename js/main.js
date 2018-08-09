@@ -14,7 +14,7 @@
     var touch = Modernizr.touch;
     var $mapColors = [];
     var $mapMarker = 'marker.png';
-    /**-------------------- Scrolling Page Settings --------------------**/   
+    /**-------------------- Scrolling Page Settings --------------------**/
     var ScrollTo = {
         init: function () {
             ScrollTo.hash();
@@ -76,13 +76,13 @@
             });
         }
     }
-    
-/**-------------------- Revolution Slider Settings --------------------**/      
+
+/**-------------------- Revolution Slider Settings --------------------**/
     var RsSlider = {
         init: function() {
             jQuery('.tp-banner').revolution({
                 sliderType:"standard",
-                sliderLayout:"fullscreen",                
+                sliderLayout:"fullscreen",
                 dottedOverlay:"none",
                 delay:9000,
                 navigation: {
@@ -155,8 +155,8 @@
             });
         }
     }
-    
-/**-------------------- Waypoints Settings --------------------**/   
+
+/**-------------------- Waypoints Settings --------------------**/
      var Waypoints = {
         init: function () {
             jQuery('.waypoint').waypoint(function (direction) {
@@ -166,16 +166,16 @@
                             obj = obj.waypoint('prev');
                     }
                     window.location.hash = obj.data('hash')
-                
+
                     jQuery('nav li a').each(function () {
                         jQuery(this).removeClass('current');
                     });
                     jQuery('nav li a[href="#' + obj.data('hash') + '"]').each(function () {
                         jQuery(this).addClass('current');
                     });
-            },{ 
-                offset: function () { 
-                    return  $ofst; 
+            },{
+                offset: function () {
+                    return  $ofst;
                 }
             });
         },
@@ -203,7 +203,7 @@
             });
         }
     }
-    
+
 /**-------------------- TopBar Settings --------------------**/
     var Topbar = {
         init: function() {
@@ -213,7 +213,7 @@
             }
             Topbar.onScroll();
         },
-        
+
         onHover: function() {
             if (!isMobile) {
                 jQuery('.navbar .dropdown').on({
@@ -233,7 +233,7 @@
                 });
             }
          },
-         
+
          onClick: function() {
             jQuery(".main-top nav li a").on({
                 click: function(e) {
@@ -244,7 +244,7 @@
                 }
             });
          },
-         
+
          onScroll: function() {
                     var maintop = jQuery(".main-top");
                     var actions = jQuery('.action-to-scroll');
@@ -254,7 +254,7 @@
                         }
                         maintop.addClass("sticky");
                     }
-                    
+
                     $document.on("scroll", function() {
                         if (jQuery(this).scrollTop() > 120 ) {
                           if(!isMobile) {
@@ -263,7 +263,7 @@
                                 }
                                 maintop.addClass("sticky");
                           }
-                          actions.fadeIn();                         
+                          actions.fadeIn();
                         } else {
                           if(!isMobile) {
                                 if($versionMenu == 'version2') {
@@ -276,7 +276,7 @@
                     });
          }
     }
- 
+
 /**-------------------- Parallax Stellar Settings --------------------**/
 
     var Parallax = {
@@ -287,7 +287,7 @@
             });
         }
     }
-    
+
 /**-------------------- Owl Carousel Settings --------------------**/
 
     var OwlCarousel = {
@@ -299,7 +299,7 @@
                 itemsMobile: [480, 1],
                 itemsTablet: [800,1]
             });
-        
+
             $("#testimonials .owl-carousel").owlCarousel({
                 navigation : false,
                 slideSpeed : 300,
@@ -308,24 +308,24 @@
             });
         }
     }
-    
+
 /**-------------------- Masonry Gallery Settings --------------------**/
     var MasonryGallery = {
         init : function() {
             MasonryGallery.imagesLoaded();
             MasonryGallery.magnificPopup();
         },
-        
+
         imagesLoaded: function() {
             $photoContainer.imagesLoaded(function() {
-                $photoContainer.isotope( { 
-                        itemSelector : '.photo-item', 
+                $photoContainer.isotope( {
+                        itemSelector : '.photo-item',
                         layoutMode : 'masonry',
                         resizable: false
                } );
            });
         },
-        
+
         magnificPopup: function() {
             $photoContainer.magnificPopup({
                     delegate: 'a',
@@ -338,25 +338,25 @@
             });
         }
     }
-    
+
 /**-------------------- Masonry Blog Settings --------------------**/
     var MasonryBlog = {
         init : function() {
             MasonryBlog.imagesLoaded();
         },
-        
+
         imagesLoaded: function() {
             $blogContainer.imagesLoaded(function() {
-                $blogContainer.isotope( { 
-                        itemSelector : '.blog-item', 
+                $blogContainer.isotope( {
+                        itemSelector : '.blog-item',
                         layoutMode : 'masonry',
                         resizable: false
                 });
-                
+
                 MasonryBlog.showMore($blogContainer);
            });
         },
-        
+
         showMore: function(blogContainer) {
             jQuery('.blog-btn-read-more .button-style1').on('click', function (e) {
                     e.preventDefault();
@@ -368,7 +368,7 @@
                                 var content = response;
                                 var items = $(content);
                                 var newItems = $(items).appendTo(blogContainer);
-                                
+
                                 blogContainer.imagesLoaded(function() {
                                     blogContainer.isotope('appended', newItems );
                                 });
@@ -377,7 +377,7 @@
             });
         }
     }
-    
+
     var Theme =  {
         setStyleSheet: function(color) {
             var i, link;
@@ -389,10 +389,9 @@
                   }
                 }
             }
-            GoogleMaps.init(color);
         }
     }
-    
+
 /**-------------------- Google Maps Settings --------------------**/
 
     var GoogleMaps = {
@@ -424,11 +423,11 @@
             }
 
             var styles = [{"featureType": "landscape", "stylers": [{ "color": $mapColors[0] }]}, {"featureType": "road.highway", "stylers": [{ "color": $mapColors[1]}]}, {"stylers": [{ "saturation": -48 }, { "hue": $mapColors[2] }]}];
-            
+
             var myOptions = {zoom: 16, center: latlng, mapTypeId: google.maps.MapTypeId.ROADMAP, scrollwheel: false, styles: styles}
             map = new google.maps.Map(document.getElementById("map"), myOptions);
             map.setOptions({draggable: (isMobile) ? false : true });
-            
+
             GoogleMaps.showMap(title, address, $mapMarker);
         },
         showMap: function(title, address, $mapMarker) {
@@ -458,8 +457,8 @@
             google.maps.event.addDomListener(window, 'load');
         },
     }
-   
-   /**-------------------- Validation Reservation Form Settings --------------------**/   
+
+   /**-------------------- Validation Reservation Form Settings --------------------**/
     var ValidationForm = {
         init: function() {
             $(".reservation-form").validate({
@@ -512,8 +511,8 @@
             });
         }
     }
-   
- /**-------------------- Ajax Complete Menu Settings --------------------**/   
+
+ /**-------------------- Ajax Complete Menu Settings --------------------**/
     var AjaxMenu = {
         init: function () {
             jQuery('.our-menu-btn-complete-menu .button-style1').on('click', function (e) {
@@ -553,7 +552,7 @@
                                                             obj.addClass('animated ' + dataAnimation).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend notAnimated', function () {
                                                                 obj.css({'opacity': 1}).removeClass('animated ' + dataAnimation);
                                                             });
-                                                            
+
                                                             jQuery('#ajax-content-menu .our-menu-btn-close-menu .button-style1').on('click', function (e) {
                                                                 e.preventDefault();
                                                                 ScrollTo.scroll(jQuery('.our-menu-food'));
@@ -568,10 +567,10 @@
                                         }, 1000);
                                 }
                         });
-                }, 500);    
+                }, 500);
         },
     }
-    
+
     var Starting = function() {
         Theme.setStyleSheet(); //passing one of this value: 'light', 'turtledove', 'darkbrown', 'zephir'
         ScrollTo.init();
@@ -584,7 +583,7 @@
         AjaxMenu.init();
         RsSlider.init();
     }
-    
+
    jQuery(document).ready(function(){
         if (isMobile && touch) {
                 $('*').removeAttr('data-animation');
@@ -598,7 +597,7 @@
             }
         }
         Starting(function(){});
- 
+
         function checkMsie() {
             var uAgent = window.navigator.userAgent;
             var Id = uAgent.indexOf("MSIE");
